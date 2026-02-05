@@ -12,6 +12,14 @@ Lightweight Windows 11 slideshow viewer (Python + PySide6) project skeleton.
 4. Run
    - `python -m app`
 
+## Package (single EXE)
+1. Install build deps
+   - `pip install -r requirements-dev.txt`
+2. Build
+   - `powershell -ExecutionPolicy Bypass -File .\build.ps1`
+3. Output
+   - `dist\Win11SlideshowPhotos.exe`
+
 ## Notes
 - Edit `app/settings.py` to set the initial root folder.
-- This is a skeleton. Features like preloading, precise timing, and folder chaining are stubbed for now.
+- Folder chaining and interval control are implemented in the UI.
