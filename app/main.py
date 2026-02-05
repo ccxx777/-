@@ -5,7 +5,7 @@ from pathlib import Path
 
 from PySide6 import QtWidgets
 
-from .paths import collect_image_paths
+from .paths import collect_image_groups
 from .settings import SETTINGS
 from .viewer import SlideShowWindow
 
@@ -14,9 +14,9 @@ def main() -> int:
     app = QtWidgets.QApplication(sys.argv)
 
     root = Path(SETTINGS.root_folder)
-    paths = collect_image_paths(root)
+    groups = collect_image_groups(root)
 
-    window = SlideShowWindow(paths, SETTINGS.interval_seconds, SETTINGS.preload_count)
+    window = SlideShowWindow(groups, SETTINGS.interval_seconds, SETTINGS.preload_count)
     window.resize(1280, 720)
     window.show()
 
