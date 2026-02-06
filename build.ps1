@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 
 $env:PYTHONIOENCODING = 'utf-8'
 
-pyinstaller --noconfirm --clean --onefile --windowed `
+pyinstaller --noconfirm --clean --windowed `
   --name "Win11SlideshowPhotos" `
   --collect-all PySide6 `
   --collect-all shiboken6 `
